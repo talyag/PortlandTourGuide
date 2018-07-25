@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="88dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        style="@style/title"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/detail_text_view"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Elk Statue" />
+
+    <TextView
+        android:id="@+id/detail_text_view"
+        android:layout_width="236dp"
+        android:layout_height="wrap_content"
+        style="@style/description"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_view"
+        tools:text="Historic bronze statue." />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"/>
+
+
+</android.support.constraint.ConstraintLayout>

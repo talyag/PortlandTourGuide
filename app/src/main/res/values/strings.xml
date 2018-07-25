@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Portland Tour Guide</string>
+
+    <string name="welcome">Welcome to Portland</string>
+    <string name="item_art"><![CDATA[Art & Architecture]]></string>
+    <string name="item_parks"><![CDATA[Parks & Gardens]]></string>
+    <string name="item_food"><![CDATA[Food & Drink]]></string>
+    <string name="item_shop">Shopping</string>
+    <string name="pam">Portland Art Museum</string>
+    <string name="elk">Elk Statue</string>
+    <string name="pioneer">Pioneer Square</string>
+    <string name="schnitzer">Arlene Schnitzer Concert Hall</string>
+    <string name="portlandia">Portlandia</string>
+    <string name="st_johns">St. Johns Bridge</string>
+    <string name="oregon_mural">Oregon History</string>
+    <string name="forest_park">Forest Park</string>
+    <string name="rose_test">International Rose Test Garden</string>
+    <string name="laurelhurst">Laurelhurst Park</string>
+    <string name="tanner">Tanner Springs Park</string>
+    <string name="waterfront">Tom McCall Waterfront Park</string>
+    <string name="south_park">South Park Blocks</string>
+    <string name="stumptown">Stumptown</string>
+    <string name="screen_door">Screen Door</string>
+    <string name="alder_cart">Alder Street Food Cart Pod</string>
+    <string name="voodoo">Voodoo Doughnuts</string>
+    <string name="salt_straw">Salt and Straw</string>
+    <string name="pok_pok">Pok Pok</string>
+    <string name="ovation">Ovation</string>
+</resources>
