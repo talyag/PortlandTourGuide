@@ -71,7 +71,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void selectDrawerItem(MenuItem menuItem) {
         // Create a new fragment and specify the fragment to show based on nav item clicked
-        // Method from codepath tutorial
+        // Referenced codepath tutorial for drawer select method:
+        // https://guides.codepath.com/android/fragment-navigation-drawer#define-fragments
         Fragment fragment = null;
         Class fragmentClass;
         switch (menuItem.getItemId()) {
@@ -111,6 +112,6 @@ public class MainActivity extends AppCompatActivity {
         // close drawer when item is tapped
         mDrawerLayout.closeDrawers();
 
-    }
+    } // End of codepath tutorial reference
 
 }

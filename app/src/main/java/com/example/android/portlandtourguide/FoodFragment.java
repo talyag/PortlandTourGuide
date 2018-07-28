@@ -30,37 +30,41 @@ public class FoodFragment extends Fragment {
 
         final ArrayList<Place> places = new ArrayList<Place>();
         places.add(new Place
+                (getString(R.string.deschutes),
+                        getString(R.string.deschutes_desc)));
+        places.add(new Place
                 (getString(R.string.stumptown),
-                        "Nationally-recognized coffee."));
+                        getString(R.string.stumptown_desc)));
         places.add(new Place
                 (getString(R.string.screen_door),
-                        "Chicken and sweet potato waffles."));
-        places.add(new Place
-                (getString(R.string.alder_cart),
-                        "A city block of food carts."));
+                        getString(R.string.screen_door_desc)));
         places.add(new Place
                 (getString(R.string.voodoo),
-                        "Quirky doughnut spot."));
+                        getString(R.string.voodoo_desc)));
+        places.add(new Place
+                (getString(R.string.alder_cart),
+                        getString(R.string.alder_desc)));
+        places.add(new Place
+                (getString(R.string.paa_dee),
+                        getString(R.string.paa_dee_desc)));
         places.add(new Place
                 (getString(R.string.salt_straw),
-                        "Unique local ice cream chain."));
+                        getString(R.string.salt_straw_desc)));
         places.add(new Place
-                (getString(R.string.pok_pok),
-                        "Thai restaurant \u22C5 specializing in wings."));
+                (getString(R.string.pokemon),
+                        getString(R.string.pokemon_desc)));
         places.add(new Place
-                (getString(R.string.ovation),
-                        "Moroccan coffee \u2022 tea."));
+                (getString(R.string.danwei),
+                        getString(R.string.danwei_desc)));
 
         // Create a new {@link PlaceAdapter}, with {@link Place} data source.
         PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
 
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
+        // Find {@link ListView} in the view hierarchy of the {@link Activity}.
+        // View ID list is declared in the place_list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link PlaceAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Place} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter}
         listView.setAdapter(adapter);
 
         return rootView;

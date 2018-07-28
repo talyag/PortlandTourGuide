@@ -29,40 +29,38 @@ public class ShopFragment extends Fragment {
 
         final ArrayList<Place> places = new ArrayList<Place>();
         places.add(new Place
-                ("Saturday Market",
-                        "Long-running street market."));
+                (getString(R.string.powells),
+                        getString(R.string.powells_desc)));
         places.add(new Place
-                ("Powell's Books",
-                        "The city of books."));
+                (getString(R.string.saturday_market),
+                        getString(R.string.saturday_desc)));
         places.add(new Place
-                ("Saturday Market",
-                        "A weekend market for local arts and crafts vendors."));
+                (getString(R.string.floating_world),
+                        getString(R.string.floating_world_desc)));
         places.add(new Place
-                ("Nike Factory Store",
-                        "It's Nike."));
+                (getString(R.string.crafty),
+                        getString(R.string.crafty_desc)));
         places.add(new Place
-                ("Crafty Wonderland",
-                        "Gifts and local products."));
+                (getString(R.string.pioneer_place),
+                        getString(R.string.pioneer_place_desc)));
         places.add(new Place
-                ("Pioneer Place",
-                        "Downtown mall."));
+                (getString(R.string.hawthorne),
+                        getString(R.string.hawthorne_desc)));
         places.add(new Place
-                ("Hawthorne District",
-                        "Offbeat neighborhood with various boutique shops."));
+                (getString(R.string.records),
+                        getString(R.string.records_desc)));
         places.add(new Place
-                ("Mississippi Records",
-                        "Record shop with huge vinyl selection. Record label next door."));
+                (getString(R.string.antique),
+                        getString(R.string.antique_desc)));
 
         // Create a new {@link PlaceAdapter}, with {@link Place} data source.
         PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
 
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
+        // Find {@link ListView} in the view hierarchy of the {@link Activity}.
+        // View ID list is declared in the place_list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter}
         listView.setAdapter(adapter);
 
         return rootView;

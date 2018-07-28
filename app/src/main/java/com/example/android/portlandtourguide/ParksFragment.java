@@ -16,7 +16,6 @@ import java.util.ArrayList;
  */
 public class ParksFragment extends Fragment {
 
-
     public ParksFragment() {
         // Required empty public constructor
     }
@@ -31,33 +30,34 @@ public class ParksFragment extends Fragment {
         final ArrayList<Place> places = new ArrayList<Place>();
         places.add(new Place
                 (getString(R.string.forest_park),
-                        "A forest in the city.",R.drawable.forest_park));
+                        getString(R.string.forest_park_desc),R.drawable.forest_park));
         places.add(new Place
                 (getString(R.string.rose_test),
-                        "Many rose varieties.",R.drawable.rose_test));
+                        getString(R.string.rose_test_desc),R.drawable.rose_test));
         places.add(new Place
                 (getString(R.string.laurelhurst),
-                        "Lush park with a pond.",R.drawable.laurelhurst));
+                        getString(R.string.laurelhurst_desc),R.drawable.laurelhurst));
         places.add(new Place
                 (getString(R.string.tanner),
-                        "Park with a fish pond.",R.drawable.tanner));
+                        getString(R.string.tanner_desc),R.drawable.tanner));
         places.add(new Place
                 (getString(R.string.waterfront),
-                        "A downtown park along the Willamette waterfront.",R.drawable.bg_test));
+                        getString(R.string.waterfront_desc),R.drawable.waterfront));
+        places.add(new Place
+                (getString(R.string.mill_ends),
+                        getString(R.string.mill_ends_desc),R.drawable.mill_ends));
         places.add(new Place
                 (getString(R.string.south_park),
-                        "A park spanning several blocks.",R.drawable.south_park));
+                        getString(R.string.south_park_desc),R.drawable.south_park));
 
         // Create a new {@link PlaceAdapter}, with {@link Place} data source.
         PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
 
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
-        // There should be a {@link ListView} with the view ID called list, which is declared in the
-        // word_list.xml layout file.
+        // Find {@link ListView} in the view hierarchy of the {@link Activity}.
+        // View ID list is declared in the place_list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link WordAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Word} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter}
         listView.setAdapter(adapter);
 
         return rootView;

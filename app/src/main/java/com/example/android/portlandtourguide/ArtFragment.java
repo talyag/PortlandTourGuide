@@ -31,34 +31,34 @@ public class ArtFragment extends Fragment {
         final ArrayList<Place> places = new ArrayList<Place>();
         places.add(new Place
                 (getString(R.string.pam),
-                "The oldest art museum on the West Coast.",R.drawable.pam));
+                getString(R.string.pam_desc),R.drawable.pam));
         places.add(new Place
                 (getString(R.string.elk),
-                "Fountain named after a former Portland mayor.", R.drawable.elk));
+                getString(R.string.elk_desc), R.drawable.elk));
         places.add(new Place
                 (getString(R.string.pioneer),
-                "A public square at the heart of downtown.",R.drawable.pioneer));
+                getString(R.string.pioneer_desc),R.drawable.pioneer));
         places.add(new Place
                 (getString(R.string.schnitzer),
-                        "A performing arts center.",R.drawable.schnitzer));
+                        getString(R.string.schnitzer_desc),R.drawable.schnitzer));
         places.add(new Place
                 (getString(R.string.portlandia),
-                "Trident-wielding statue inspired by the city's seal.",R.drawable.bg_test));
+                getString(R.string.portlandia_desc),R.drawable.bg_test));
         places.add(new Place
                 (getString(R.string.st_johns),
-                "A gothic suspension bridge and the tallest bridge in Portland.",R.drawable.bg_test));
+                getString(R.string.st_johns_desc),R.drawable.bg_test));
         places.add(new Place
                 (getString(R.string.oregon_mural),
-                "The mural depicts members of the Lewis and Clark Expedition",R.drawable.oregon_mural));
+                getString(R.string.oregon_mural_desc),R.drawable.oregon_mural));
 
         // Create a new {@link PlaceAdapter}, with {@link Place} data source.
         PlaceAdapter adapter = new PlaceAdapter(getActivity(), places);
 
-        // Find the {@link ListView} object in the view hierarchy of the {@link Activity}.
+        // Find {@link ListView} in the view hierarchy of the {@link Activity}.
+        // View ID list is declared in the place_list.xml layout file.
         ListView listView = (ListView) rootView.findViewById(R.id.list);
 
-        // Make the {@link ListView} use the {@link PlaceAdapter} we created above, so that the
-        // {@link ListView} will display list items for each {@link Place} in the list.
+        // Make the {@link ListView} use the {@link PlaceAdapter}
         listView.setAdapter(adapter);
 
         return rootView;
